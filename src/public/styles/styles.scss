@@ -1,0 +1,12 @@
+@import './colors.scss';
+
+body {
+  background-color: $light-gray;
+}
+
+button.button-close {
+  float: right;
+  cursor: pointer;
+  border: none;
+  background-color: $light-gray;
+}

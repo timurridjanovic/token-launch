@@ -1,0 +1,147 @@
+@import '../../styles/colors.scss';
+@import '../../styles/breakpoints.scss';
+
+.intro-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+
+  .video-container {
+    width: 100%;
+
+    @include tablet {
+      width: 70%;
+    }
+  }
+
+  .title {
+    margin-top: 20px;
+  }
+
+  .stats-container {
+    width: 100%;
+
+    @include tablet {
+      width: 30%;
+    }
+
+    .wrapper {
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+
+      .progress-bar-blue {
+        background-color: $blue;
+        height: 4px;
+        transition: 0.5s ease;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .progress-bar-gray {
+        background-color: $gray;
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        top: 10px;
+      }
+
+      .total-contribution-title {
+        color: $blue;
+      }
+
+      button.contribution-button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 20px;
+        font-size: 18px;
+        border: none;
+        background-color: $blue;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.contribution-overlay {
+  $height: calc(100vh / 1.5);
+  top: calc(50% - #{$height} / 2);
+  left: 0;
+  z-index: 21;
+  width: 100%;
+  height: $height;
+  overflow: auto;
+  background-color: $light-gray;
+
+  @include tablet {
+    width: 400px;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+  }
+
+  .pledge-container {
+    margin: 20px 0;
+    border: 1px solid;
+    padding: 10px;
+
+    .wrapper {
+      margin-bottom: 15px;
+
+      .star {
+        color: $star;
+      }
+    }
+  }
+
+  .title {
+    margin-top: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid $blue;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  button.contribution-button-overlay {
+      float: right;
+      margin-top: 10px;
+      border: none;
+
+      &.pt-disabled {
+        background: $gray;
+        color: white;
+      }
+
+      &:not(.pt-disabled) {
+        background: $blue;
+        box-shadow: none;
+        color: white;
+      }
+  }
+}
+
+.vjs-matrix.video-js {
+  color: $blue;
+}
+
+.vjs-matrix .vjs-big-play-button {
+  border-color: $blue;
+}
+
+.vjs-matrix .vjs-volume-level,
+.vjs-matrix .vjs-play-progress,
+.vjs-matrix .vjs-slider-bar {
+  background: $blue;
+}

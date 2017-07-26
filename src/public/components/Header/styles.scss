@@ -1,0 +1,75 @@
+@import '../../styles/colors.scss';
+@import '../../styles/breakpoints.scss';
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  .user-container {
+    cursor: pointer;
+    width: 100%;
+    padding: 20px;
+    min-width: 100px;
+    text-align: center;
+
+    @include tablet {
+      width: 20%;
+    }
+
+    .pt-icon-user {
+      font-size: 40px;
+    }
+  }
+
+  .title-container {
+    width: 100%;
+    padding: 20px;
+
+    @include tablet {
+      width: 80%;
+    }
+
+    .subtitle {
+      font-size: 18px;
+    }
+  }
+}
+
+.user-container-overlay {
+  $height: calc(100vh / 1.5);
+  top: calc(50% - #{$height} / 2);
+  left: 0;
+  z-index: 21;
+  width: 100%;
+  height: $height;
+  overflow: auto;
+  background-color: $light-gray;
+
+  @include tablet {
+    width: 400px;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+  }
+
+  .user {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .pt-icon-user {
+      font-size: 80px;
+    }
+  }
+
+  .title {
+    margin-top: 20px;
+  }
+}
