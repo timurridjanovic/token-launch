@@ -47,7 +47,7 @@ test('Intro renders accurately', t => {
   t.is(component.state().overlayOpen, true)
   t.is(onContributionSubmit.callCount, 0)
   t.is(component.find('Overlay button').get(1).props.className.includes('pt-disabled'), true)
-  component.find('Overlay input').simulate('change', { target: { value: '5000' }})
+  component.find('Overlay input').simulate('change', { target: { value: '5000' } })
   t.is(component.find('Overlay button').get(1).props.className.includes('pt-disabled'), false)
   component.find('Overlay button').at(1).simulate('click')
   t.is(onContributionSubmit.callCount, 1)

@@ -28,7 +28,7 @@ class Header extends React.Component {
       <div>
         <div className='header-container'>
           <div className='user-container' onClick={this._openOverlay}>
-            <div className='pt-icon-standard pt-icon-user'></div>
+            <div className='pt-icon-standard pt-icon-user' />
             <div>By {user.username}</div>
           </div>
           <div className='title-container'>
@@ -44,7 +44,7 @@ class Header extends React.Component {
               <span className='pt-icon-standard pt-icon-cross' />
             </button>
             <div className='user'>
-              <div className='pt-icon-standard pt-icon-user'></div>
+              <div className='pt-icon-standard pt-icon-user' />
               <h3>{user.username}</h3>
             </div>
             <h3 className='title'>About the creator</h3>

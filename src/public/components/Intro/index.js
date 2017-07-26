@@ -27,7 +27,7 @@ class Intro extends React.Component {
   }
 
   componentWillUnmount () {
-     clearInterval(this.state.intervalId)
+    clearInterval(this.state.intervalId)
   }
 
   _timer () {
@@ -82,20 +82,19 @@ class Intro extends React.Component {
         <div className='video-container'>
           <video
             id={'intro-video'}
-            ref={(player) => this.player = player}
+            ref={(player) => (this.player = player)}
             tabIndex={1}
             width={600}
             height={400}
             className={`video-js vjs-matrix`}
             controls
             data-setup='{ "inactivityTimeout": 0, "fluid": true, "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/embed/hH7nxgAbQt0"}] }'
-            style={{ margin: '0 auto' }} >
-          </video>
+            style={{ margin: '0 auto' }} />
         </div>
         <div className='stats-container'>
           <div className='wrapper'>
-            <div className='progress-bar-blue' style={{ width: blueLine }}></div>
-            <div className='progress-bar-gray'></div>
+            <div className='progress-bar-blue' style={{ width: blueLine }} />
+            <div className='progress-bar-gray' />
             <h3 className='total-contribution-title title'>Ξ{this._formatNumbers(contributions.totalContribution)}</h3>
             <div>Pledged of Ξ{this._formatNumbers(contributions.totalGoal)} goal</div>
             <h3 className='title'>{this._formatNumbers(contributions.backers)}</h3>
@@ -118,34 +117,34 @@ class Intro extends React.Component {
             <div>
               <div className='pledge-container'>
                 <div className='wrapper'>
-                  <span className='pt-icon-star star'></span>
+                  <span className='pt-icon-star star' />
                 </div>
                 <h5>Ξ{this._formatNumbers(1500)}+</h5>
                 <p>Get tokens first and participate in the BETA testing phase</p>
               </div>
               <div className='pledge-container'>
                 <div className='wrapper'>
-                  <span className='pt-icon-star star'></span>
-                  <span className='pt-icon-star star'></span>
+                  <span className='pt-icon-star star' />
+                  <span className='pt-icon-star star' />
                 </div>
                 <h5>Ξ{this._formatNumbers(5000)}+</h5>
                 <p>Enjoy a one year free subscription to our service</p>
               </div>
               <div className='pledge-container'>
                 <div className='wrapper'>
-                  <span className='pt-icon-star star'></span>
-                  <span className='pt-icon-star star'></span>
-                  <span className='pt-icon-star star'></span>
+                  <span className='pt-icon-star star' />
+                  <span className='pt-icon-star star' />
+                  <span className='pt-icon-star star' />
                 </div>
                 <h5>Ξ{this._formatNumbers(10000)}+</h5>
                 <p>Get a 10% bonus in coins on top of your purchase</p>
               </div>
               <div className='pledge-container'>
                 <div className='wrapper'>
-                  <span className='pt-icon-star star'></span>
-                  <span className='pt-icon-star star'></span>
-                  <span className='pt-icon-star star'></span>
-                  <span className='pt-icon-star star'></span>
+                  <span className='pt-icon-star star' />
+                  <span className='pt-icon-star star' />
+                  <span className='pt-icon-star star' />
+                  <span className='pt-icon-star star' />
                 </div>
                 <h5>Ξ{this._formatNumbers(25000)}+</h5>
                 <p>Get an invitation to the token launch and explore opportunities to become a distribution partner</p>

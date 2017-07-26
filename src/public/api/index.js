@@ -16,8 +16,8 @@ const comments = [
 ]
 
 class Api {
-	static getUserData () {
-		return Api._fakeService({ user: 'Timur' }, 1000)
+  static getUserData () {
+    return Api._fakeService({ user: 'Timur' }, 1000)
   }
 
   static getContributionData () {
@@ -33,13 +33,13 @@ class Api {
     return Api._fakeService({ comments }, 0)
   }
 
-	static _fakeService (obj, delay) {
-		return new Promise((resolve, reject) => {
-			setTimeout(() => {
-				resolve({ response: obj })
-			}, delay)
-		})
-	}
+  static _fakeService (obj, delay) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ response: obj })
+      }, delay)
+    })
+  }
 }
 
 export default Api

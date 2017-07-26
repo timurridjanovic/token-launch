@@ -43,13 +43,13 @@ class About extends React.Component {
   render () {
     const { activeTab, comment, username } = this.state
     const { comments } = this.props
-    const invalidUsername = !username.match(/^([a-zA-Z0-9'\-\_]{3,20})$/) && username.trim().length > 0
+    const invalidUsername = !username.match(/^([a-zA-Z0-9'\-_]{3,20})$/) && username.trim().length > 0
     const disabledComment = comment.trim().length <= 0 || username.trim().length <= 0 || invalidUsername
     return (
       <div>
         <StickyHeader
           tabs={['Campaign', 'FAQ', 'Comments']}
-          onTabUpdate={this._onTabUpdate}/>
+          onTabUpdate={this._onTabUpdate} />
         <div className='about-container'>
           {activeTab === 0 &&
             <div>
@@ -80,7 +80,7 @@ class About extends React.Component {
               {comments.map((comment, i) =>
                 <div className='comment' key={i}>
                   <div className='comment-user'>
-                    <span className='pt-icon-user'></span>
+                    <span className='pt-icon-user' />
                     <span>{comment.username}</span>
                     <span className='date'>{comment.date.fromNow()}</span>
                   </div>

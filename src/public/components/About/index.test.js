@@ -57,8 +57,8 @@ test('About renders accurately', t => {
   t.is(button.length, 1)
   t.is(button.get(0).props.className.includes('pt-disabled'), true)
 
-  input.simulate('change', { target: { value: 'Timmy'}})
-  textarea.simulate('change', { target: { value: 'bla' }})
+  input.simulate('change', { target: { value: 'Timmy' } })
+  textarea.simulate('change', { target: { value: 'bla' } })
   const newButton = component.find('.post-container button')
   t.is(newButton.get(0).props.className.includes('pt-disabled'), false)
   t.is(onCommentSubmit.callCount, 0)

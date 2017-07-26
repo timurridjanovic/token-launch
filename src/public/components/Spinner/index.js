@@ -1,7 +1,7 @@
 import * as React from 'react'
 import './styles.scss'
 
-const Spinner = (props: any) =>
+const Spinner = (props) =>
   <div className='app-spinner pt-spinner pt-large'>
     <div className='pt-spinner-svg-container'>
       <svg viewBox='0 0 100 100'>

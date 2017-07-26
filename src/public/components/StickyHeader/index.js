@@ -16,21 +16,21 @@ class StickyHeader extends React.Component {
   }
 
   componentDidMount () {
-    window.addEventListener("scroll", this._handleScroll)
+    window.addEventListener('scroll', this._handleScroll)
   }
 
   componentWillUnmount () {
-    window.removeEventListener("scroll", this._handleScroll)
+    window.removeEventListener('scroll', this._handleScroll)
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate (nextProps, nextState) {
     return (nextState.activeSticky !== this.state.activeSticky ||
       nextState.activeTab !== this.state.activeTab)
   }
 
   _handleScroll () {
     const doc = document.documentElement
-    const top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0)
+    const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
     if (!this.state.activeSticky) {
       const _top = ReactDOM.findDOMNode(this).offsetTop
       this.setState({ _top })
@@ -59,8 +59,8 @@ class StickyHeader extends React.Component {
               className='tab'>
               {tab}
             </div>
-            <div className={`tab-underline ${activeTab === i ? 'active' : ''}`}></div>
-        </div>
+            <div className={`tab-underline ${activeTab === i ? 'active' : ''}`} />
+          </div>
         )}
       </div>
     )

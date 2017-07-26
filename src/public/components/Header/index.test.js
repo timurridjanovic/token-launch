@@ -1,8 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import test from 'ava'
-import moment from 'moment'
-import sinon from 'sinon'
 import Header from '.'
 
 const user = { username: 'Timur' }

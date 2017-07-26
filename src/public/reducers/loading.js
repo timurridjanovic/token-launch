@@ -1,5 +1,3 @@
-import * as actions from '../actions'
-
 const initialState = true
 
 const reducer = (state = initialState, action) => {
