@@ -10,7 +10,7 @@
     "lint": "standard --fix",
     "coverage": "./node_modules/.bin/nyc report --reporter=html",
     "test": "cross-env NODE_ENV=test nyc ava 'public/**/*.test.js' --verbose",
-    "install-hooks": "cp -f ./.hooks/* ./.git/hooks/; chmod +x ./.git/hooks/*"
+    "install-hooks": "cp -f ./.hooks/* ../.git/hooks/; chmod +x ../.git/hooks/*"
   },
   "author": "Timur",
   "license": "ISC",
